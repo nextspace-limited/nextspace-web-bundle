@@ -9,11 +9,13 @@
 <body>
     <script>
         // Setup global defaults.
-        BModels.ENVIRONMENT.PARAMS = {
-            ...BModels.ENVIRONMENT.PARAMS,
-            // Replace with your account ID.
-            accountId: "template"
-        }
+        BModels.ENVIRONMENT.Reset({
+            // Check "Overview" within the "This Account" sidebar section of Operator to see your Account ID.
+            accountId: "openstreetmapdemo1",
+            // UAT is for early access to features, for a stable release use PROD.
+            env: BModels.Api.EEnv.UAT,
+            sessionId: "anonymous"
+        });
 
         // Get default api instance.
         // Normally you'd never have to do this.
